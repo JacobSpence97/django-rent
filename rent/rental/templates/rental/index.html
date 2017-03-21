@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+{% load static %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous"> 
-<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="{% static 'rental/home.css'%}">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -17,21 +18,21 @@
 <title>Rent-A-Flix</title>
 </head>
 <body>
-<center><img id="banner" src="img/banner.jpg"></center>
+<center><img id="banner" src="../static/rental/img/banner.jpg"></center>
 <div class="slideshow-container">
   <div class="mySlides fade">
     <div class="numbertext"></div>
-    <img src="img/strange.jpg" style="width:100%" style="height:100%">
+    <img src="../static/rental/img/strange.jpg" style="width:100%" style="height:100%">
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext"></div>
-    <img src="img/avatar.jpg" style="width:100%" style="height:100%">
+    <img src="../static/rental/img/avatar.jpg" style="width:100%" style="height:100%">
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext"></div>
-    <img src="img/hellboy.jpg" style="width:100%" style="height:100%">
+    <img src="../static/rental/img/hellboy.jpg" style="width:100%" style="height:100%">
   </div>
 
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -50,7 +51,7 @@
   Founded by some geek that has no life what so ever.</br>
   He started this company so pepole could rent movies and comic books.</br>
   At Rent-A-Flix you can rent VHS(yes really), DVDs, Special Edittions, Blu-Rays, and of course Comics.</p></center>
-<script src="jquery-3.1.1.js"></script>
-<script src="carosel.js"></script>
+<script src="../static/rental/jquery-3.1.1.js"></script>
+<script src="../static/rental/carosel.js"></script>
 </body>
 </html>
