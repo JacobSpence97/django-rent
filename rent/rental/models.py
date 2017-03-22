@@ -7,3 +7,4 @@ class Rental(models.Model):
     rental_type = models.CharField(max_length=400)
     rent_val = models.CharField(max_length=400)
     rep_val = models.CharField(max_length=400)
+    quant = models.CharField(max_length=100)

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-{% load static %}
+{%  load static  %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous"> 
-<link rel="stylesheet" href="{% static 'rental/store.css'%}">
+<link rel="stylesheet" href="{%  static 'rental/store.css' %}">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,196 +23,110 @@
     <th>Item</th>
     <th>Item information</th>  
   </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
+    <td><img src="{{ rentals.0.img }}" height="250" width="210"></td>
     <td>
-      <h2>{{%name%}}</h2>
+      <h2>{{ rentals.0.name }}</h2>
     <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
+    <li> Type: {{ retals.0.rental_type }}</li>
+  <li>Rent Value: {{ rentals.0.rent_val }}</li>
+    <li>Replacement Value: {{ rentals.0.rep_val }}</li>
+    <li>{{ rentals.0.quant }} In Stock</li>
+    <button class='button'type="button">RENT</button>
+    </ul>
+      </td>
+  </tr>
+  <tr>
+    <td><img src="{{ rentals.1.img }}" height="250" width="210"></td>
+    <td>
+      <h2>{{rentals.1.name}}</h2>
+    <ul>
+    <li> Type: {{rentals.1.rental_type}}</li>
+  <li>Rent Value: {{rentals.1.rent_val }}</li>
+    <li>Replacement Value: {{ rentals.1.rep_val }}</li>
+    <li>{{ rentals.1.quant  }} In Stock</li>
+    <button class='button' class='button' type="button">RENT</button>
     </ul>
     </td>
   </tr>
   <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
+    <td><img src="{{  rentals.2.img }}" height="250" width="210"></td>
     <td>
-      <h2>{{%name%}}</h2>
+      <h2>{{  rentals.2.name }}</h2>
     <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
+    <li> Type: {{  rentals.2.rental_type }}</li>
+  <li>Rent Value: {{  rentals.2.rent_val }}</li>
+    <li>Replacement Value: {{  rentals.2.rep_val }}</li>
+    <li>{{  rentals.2.quant  }} In Stock</li>
+    <button class='button' type="button">RENT</button>
     </ul>
     </td>
   </tr>
   <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
+    <td><img src="{{  rentals.3.img }}" height="250" width="210"></td>
     <td>
-      <h2>{{%name%}}</h2>
+      <h2>{{  rentals.3.name }}</h2>
     <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
+    <li> Type: {{  rentals.3.rental_type }}</li>
+  <li>Rent Value: {{  rentals.3.rent_val }}</li>
+    <li>Replacement Value: {{  rentals.3.rep_val }}</li>
+    <li>{{  rentals.3.quant  }} In Stock</li>
+    <button class='button' type="button">RENT</button>
+    </ul>
+    </td>
+  </tr>
+<tr>
+    <td><img src="{{  rentals.4.img }}" height="250" width="210"></td>
+    <td>
+      <h2>{{  rentals.4.name }}</h2>
+    <ul>
+    <li> Type: {{  rentals.4.rental_type }}</li>
+  <li>Rent Value: {{  rentals.4.rent_val }}</li>
+    <li>Replacement Value: {{  rentals.4.rep_val }}</li>
+    <li>{{  rentals.4.quant  }} In Stock</li>
+    <button class='button' type="button">RENT</button>
+    </ul>
+    </td>
+  </tr>
+<tr>
+    <td><img src="{{  rentals.5.img }}" height="250" width="210"></td>
+    <td>
+      <h2>{{  rentals.5.name }}</h2>
+    <ul>
+    <li> Type: {{  rentals.5.rental_type }}</li>
+  <li>Rent Value: {{  rentals.5.rent_val }}</li>
+    <li>Replacement Value: {{  rentals.5.rep_val }}</li>
+    <li>{{  rentals.5.quant  }} In Stock</li>
+    <button class='button' type="button">RENT</button>
     </ul>
     </td>
   </tr>
   <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
+    <td><img src="{{  rentals.6.img }}" height="250" width="210"></td>
     <td>
-      <h2>{{%name%}}</h2>
+      <h2>{{  rentals.6.name }}</h2>
     <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
+    <li> Type: {{  rentals.6.rental_type }}</li>
+  <li>Rent Value: {{  rentals.6.rent_val }}</li>
+    <li>Replacement Value: {{  rentals.6.rep_val }}</li>
+    <li>{{  rentals.6.quant  }} In Stock</li>
+    <button class='button' type="button">RENT</button>
     </ul>
     </td>
   </tr>
   <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
+    <td><img src="{{  rentals.7.img }}" height="250" width="210"></td>
     <td>
-      <h2>{{%name%}}</h2>
+      <h2>{{  rentals.7.name }}</h2>
     <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
+    <li> Type: {{  rentals.7.rental_type }}</li>
+  <li>Rent Value: {{  rentals.7.rent_val }}</li>
+    <li>Replacement Value: {{  rentals.7.rep_val }}</li>
+    <li>{{  rentals.7.quant  }} In Stock</li>
+    <button class='button' type="button">RENT</button>
     </ul>
     </td>
   </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{%img%}}" height="250" width="210"></td>
-    <td>
-      <h2>{{%name%}}</h2>
-    <ul>
-    <li> Type: {{%rental_type%}}</li>
-  <li>Rent Value: {{%rent_val%}}</li>
-    <li>Replacement Value: {{%rep_val%}}</li>
-    </ul>
-    </td>
-  </tr>
-</table>
+</table> 
 </body>
 </html>
-
-
-
-<tr>
-    <td><img src="{{%img%}}"  height="250" width="210"></td>
-    <td>
-    <h2>{{%name%}}</h2>
-    <ul>
-    <li>{{% type %}}</li>
-    <li>{{% val %}}</li>
-    <li>{{ % rep_Val %}}</li>
-    </ul>
-    </td>
-  </tr>
