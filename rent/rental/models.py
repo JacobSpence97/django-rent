@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class rental(models.Model):
+class Rental(models.Model):
     name = models.CharField(max_length=400)
     img = models.CharField(max_length=400)
     rental_type = models.CharField(max_length=400)
