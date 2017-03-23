@@ -29,12 +29,16 @@
     <td>
       <h2>{{ rentals.0.name }}</h2>
     <ul>
-    <li> Type: {{ retals.0.rental_type }}</li>
-  <li>Rent Value: {{ rentals.0.rent_val }}</li>
-    <li>Replacement Value: {{ rentals.0.rep_val }}</li>
+    <li> Type: {{ rentals.0.rental_type }}</li>
+  <li>Rent Value: ${{ rentals.0.rent_val }}</li>
+    <li>Replacement Value: ${{ rentals.0.rep_val }}</li>
     <li>{{ rentals.0.quant }} In Stock</li>
-    <form action="store.html" id="dr.strange">
-    <button class='button'type="button">RENT</button>
+    <form action="store.html" id="dr.strange_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="dr.strange_return">
+    <button class='button'type="button">Return</button>
     </form>
     </ul>
       </td>
@@ -45,10 +49,16 @@
       <h2>{{rentals.1.name}}</h2>
     <ul>
     <li> Type: {{rentals.1.rental_type}}</li>
-  <li>Rent Value: {{rentals.1.rent_val }}</li>
-    <li>Replacement Value: {{ rentals.1.rep_val }}</li>
+  <li>Rent Value: ${{rentals.1.rent_val }}</li>
+    <li>Replacement Value: ${{ rentals.1.rep_val }}</li>
     <li>{{ rentals.1.quant  }} In Stock</li>
-    <button class='button' class='button' type="button">RENT</button>
+    <form action="store.html" id="avatar_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="avatar_return">
+    <button class='button'type="button">Return</button>
+    </form>
     </ul>
     </td>
   </tr>
@@ -58,11 +68,16 @@
       <h2>{{  rentals.2.name }}</h2>
     <ul>
     <li> Type: {{  rentals.2.rental_type }}</li>
-  <li>Rent Value: {{  rentals.2.rent_val }}</li>
-    <li>Replacement Value: {{  rentals.2.rep_val }}</li>
+  <li>Rent Value: ${{  rentals.2.rent_val }}</li>
+    <li>Replacement Value: ${{  rentals.2.rep_val }}</li>
     <li>{{  rentals.2.quant  }} In Stock</li>
-    <button class='button' type="button">RENT</button>
-    </ul>
+    <form action="store.html" id="bee_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="bee_return">
+    <button class='button'type="button">Return</button>
+    </form>    </ul>
     </td>
   </tr>
   <tr>
@@ -71,11 +86,16 @@
       <h2>{{  rentals.3.name }}</h2>
     <ul>
     <li> Type: {{  rentals.3.rental_type }}</li>
-  <li>Rent Value: {{  rentals.3.rent_val }}</li>
-    <li>Replacement Value: {{  rentals.3.rep_val }}</li>
+  <li>Rent Value: ${{  rentals.3.rent_val }}</li>
+    <li>Replacement Value: ${{  rentals.3.rep_val }}</li>
     <li>{{  rentals.3.quant  }} In Stock</li>
-    <button class='button' type="button">RENT</button>
-    </ul>
+    <form action="store.html" id="cap_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="cap_return">
+    <button class='button'type="button">Return</button>
+    </form>    </ul>
     </td>
   </tr>
 <tr>
@@ -84,11 +104,16 @@
       <h2>{{  rentals.4.name }}</h2>
     <ul>
     <li> Type: {{  rentals.4.rental_type }}</li>
-  <li>Rent Value: {{  rentals.4.rent_val }}</li>
-    <li>Replacement Value: {{  rentals.4.rep_val }}</li>
+  <li>Rent Value: ${{  rentals.4.rent_val }}</li>
+    <li>Replacement Value: ${{  rentals.4.rep_val }}</li>
     <li>{{  rentals.4.quant  }} In Stock</li>
-    <button class='button' type="button">RENT</button>
-    </ul>
+    <form action="store.html" id="bat_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="bat_return">
+    <button class='button'type="button">Return</button>
+    </form>    </ul>
     </td>
   </tr>
 <tr>
@@ -97,11 +122,16 @@
       <h2>{{  rentals.5.name }}</h2>
     <ul>
     <li> Type: {{  rentals.5.rental_type }}</li>
-  <li>Rent Value: {{  rentals.5.rent_val }}</li>
-    <li>Replacement Value: {{  rentals.5.rep_val }}</li>
+  <li>Rent Value: ${{  rentals.5.rent_val }}</li>
+    <li>Replacement Value: ${{  rentals.5.rep_val }}</li>
     <li>{{  rentals.5.quant  }} In Stock</li>
-    <button class='button' type="button">RENT</button>
-    </ul>
+    <form action="store.html" id="wade_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="wade_return">
+    <button class='button'type="button">Return</button>
+    </form>    </ul>
     </td>
   </tr>
   <tr>
@@ -110,11 +140,16 @@
       <h2>{{  rentals.6.name }}</h2>
     <ul>
     <li> Type: {{  rentals.6.rental_type }}</li>
-  <li>Rent Value: {{  rentals.6.rent_val }}</li>
-    <li>Replacement Value: {{  rentals.6.rep_val }}</li>
+  <li>Rent Value: ${{  rentals.6.rent_val }}</li>
+    <li>Replacement Value: ${{  rentals.6.rep_val }}</li>
     <li>{{  rentals.6.quant  }} In Stock</li>
-    <button class='button' type="button">RENT</button>
-    </ul>
+    <form action="store.html" id="hellboy_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="hellboy_return">
+    <button class='button'type="button">Return</button>
+    </form>    </ul>
     </td>
   </tr>
   <tr>
@@ -123,14 +158,18 @@
       <h2>{{  rentals.7.name }}</h2>
     <ul>
     <li> Type: {{  rentals.7.rental_type }}</li>
-  <li>Rent Value: {{  rentals.7.rent_val }}</li>
-    <li>Replacement Value: {{  rentals.7.rep_val }}</li>
+  <li>Rent Value: ${{  rentals.7.rent_val }}</li>
+    <li>Replacement Value: ${{  rentals.7.rep_val }}</li>
     <li>{{  rentals.7.quant  }} In Stock</li>
-    <button class='button' type="button">RENT</button>
-    </ul>
+    <form action="store.html" id="hulk_rent">
+    <button class='button'type="button">Rent</button>
+    </form>
+    <br/>
+    <form action="store.html" id="hulk_return">
+    <button class='button'type="button">Return</button>
+    </form>    </ul>
     </td>
   </tr>
 </table> 
 </body>
 </html>
-
