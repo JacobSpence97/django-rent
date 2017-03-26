@@ -22,7 +22,7 @@ def store(request):
     })
 
 def rent(request, item_id):
-    rental = Rental.objects.get(id = item_id)
+    rental = Rental.objects.get(pk=item_id)
     rental.quant -= 1
     rental.save()
     return redirect('store')
@@ -30,7 +30,7 @@ def rent(request, item_id):
 
 
 def returns(request, item_id):
-    rental = Rental.objects.get(id = item_id)
+    rental = Rental.objects.get(pk=item_id)
     rental.quant += 1
     rental.save()
     return redirect('store')
