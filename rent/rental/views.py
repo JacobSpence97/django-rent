@@ -23,8 +23,9 @@ def store(request):
 
 def rent(request, item_id):
     rental = Rental.objects.get(pk=item_id)
-    rental.quant -= 1
-    rental.save()
+    if rental.quant > 0:
+        rental.quant -= 1
+        rental.save()
     return redirect('store')
 
 
