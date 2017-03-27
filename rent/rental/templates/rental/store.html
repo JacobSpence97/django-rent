@@ -25,151 +25,29 @@
     <th>Rental information</th>  
   </tr>
  <tr>
-    <td><img src="{{ rentals.0.img }}" height="250" width="210"></td>
+   {%  for rental in rentals%}
+    <td><img src="{{ rental.img }}" height="250" width="210"></td>
     <td>
-      <h2>{{ rentals.0.name }}</h2>
+      <h2>{{ rental.name }}</h2>
     <ul>
-    <li> Type: {{ rentals.0.rental_type }}</li>
-  <li>Rent Value: ${{ rentals.0.rent_val }}</li>
-    <li>Replacement Value: ${{ rentals.0.rep_val }}</li>
-    <li>{{ rentals.0.quant }} In Stock</li>
-    <form action="  {% url 'rent' rentals.0.id %}" class="rent" style=" display:inline!important;">
+    <li> Type: {{ rental.rental_type }}</li>
+  <li>Rent Value: ${{ rental.rent_val }}</li>
+    <li>Replacement Value: ${{ rental.rep_val }}</li>
+    <li>{{ rental.quant }} In Stock</li>
+    <form action="  {% url 'rent' rental.id %}" class="rent" style=" display:inline!important;">
     <input type="submit" class="button" value="Rent">
     </form>
-    <form action="{% url 'returns' rentals.0.id %}" class="return" style=" display:inline!important;">
+    <form action="{% url 'returns' rental.id %}" class="return" style=" display:inline!important;">
     <input type="submit" class="button" value="Return">
     </form>
     </ul>
       </td>
   </tr>
+  {% endfor%}
   <tr>
-    <td><img src="{{ rentals.1.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{rentals.1.name}}</h2>
-    <ul>
-    <li> Type: {{rentals.1.rental_type}}</li>
-  <li>Rent Value: ${{rentals.1.rent_val }}</li>
-    <li>Replacement Value: ${{ rentals.1.rep_val }}</li>
-    <li>{{ rentals.1.quant  }} In Stock</li>
-    <form action=" {% url 'rent' rentals.1.id %} " class="rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action=" {% url 'returns' rentals.1.id %} " class="return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>
-    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{  rentals.2.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{  rentals.2.name }}</h2>
-    <ul>
-    <li> Type: {{  rentals.2.rental_type }}</li>
-  <li>Rent Value: ${{  rentals.2.rent_val }}</li>
-    <li>Replacement Value: ${{  rentals.2.rep_val }}</li>
-    <li>{{  rentals.2.quant  }} In Stock</li>
-    <form action=" {% url 'rent' rentals.2.id %} " id="bee_rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action="  {% url 'returns' rentals.2.id %}" id="bee_return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{  rentals.3.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{  rentals.3.name }}</h2>
-    <ul>
-    <li> Type: {{  rentals.3.rental_type }}</li>
-  <li>Rent Value: ${{  rentals.3.rent_val }}</li>
-    <li>Replacement Value: ${{  rentals.3.rep_val }}</li>
-    <li>{{  rentals.3.quant  }} In Stock</li>
-    <form action=" {% url 'rent' rentals.3.id %} " class="rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action=" {% url 'returns' rentals.3.id %} " class="return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>    </ul>
-    </td>
-  </tr>
-<tr>
-    <td><img src="{{  rentals.4.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{  rentals.4.name }}</h2>
-    <ul>
-    <li> Type: {{  rentals.4.rental_type }}</li>
-  <li>Rent Value: ${{  rentals.4.rent_val }}</li>
-    <li>Replacement Value: ${{  rentals.4.rep_val }}</li>
-    <li>{{  rentals.4.quant  }} In Stock</li>
-    <form action="  {% url 'rent' rentals.4.id %}" class="rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action=" {% url 'returns' rentals.4.id %}" class="return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>    </ul>
-    </td>
-  </tr>
-<tr>
-    <td><img src="{{  rentals.5.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{  rentals.5.name }}</h2>
-    <ul>
-    <li> Type: {{  rentals.5.rental_type }}</li>
-  <li>Rent Value: ${{  rentals.5.rent_val }}</li>
-    <li>Replacement Value: ${{  rentals.5.rep_val }}</li>
-    <li>{{  rentals.5.quant  }} In Stock</li>
-    <form action=" {% url 'rent' rentals.5.id %}" class="rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action="{% url 'returns' rentals.5.id %} " class="return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{  rentals.6.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{  rentals.6.name }}</h2>
-    <ul>
-    <li> Type: {{  rentals.6.rental_type }}</li>
-  <li>Rent Value: ${{  rentals.6.rent_val }}</li>
-    <li>Replacement Value: ${{  rentals.6.rep_val }}</li>
-    <li>{{  rentals.6.quant  }} In Stock</li>
-    <form action=" {% url 'rent' rentals.6.id %}" class="rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action="{% url 'returns' rentals.6.id %} " class="return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>    </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><img src="{{  rentals.7.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{  rentals.7.name }}</h2>
-    <ul>
-    <li> Type: {{  rentals.7.rental_type }}</li>
-  <li>Rent Value: ${{  rentals.7.rent_val }}</li>
-    <li>Replacement Value: ${{  rentals.7.rep_val }}</li>
-    <li>{{  rentals.7.quant  }} In Stock</li>
-    <form action="{% url 'rent' rentals.7.id %}" class="rent" style=" display:inline!important;">
-    <input type="submit" class="button" value="Rent">
-    </form>
-    
-    <form action="{% url 'returns' rentals.7.id %}" class="return" style=" display:inline!important;">
-    <input type="submit" class="button" value="Return">
-    </form>
-    </ul>
-    </td>
-  </tr>
-</table> 
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    </table>
 </body>
 </html>

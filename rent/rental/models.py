@@ -8,3 +8,6 @@ class Rental(models.Model):
     rent_val = models.IntegerField()
     rep_val = models.IntegerField()
     quant = models.IntegerField()
+
+    def __str__(self):
+        return self.name

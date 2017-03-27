@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Rental
+from django.contrib import messages
 # Create your views here.
 def home(request):
     return render(request, "rental/index.html")
@@ -25,6 +26,7 @@ def rent(request, item_id):
     rental = Rental.objects.get(pk=item_id)
     if rental.quant > 0:
         rental.quant -= 1
+        messages.success(request, "You have rented " + rental.name + "!")
         rental.save()
     return redirect('store')
 
@@ -33,5 +35,6 @@ def rent(request, item_id):
 def returns(request, item_id):
     rental = Rental.objects.get(pk=item_id)
     rental.quant += 1
+    messages.success(request, "You have returned " + rental.name + "!")
     rental.save()
     return redirect('store')
