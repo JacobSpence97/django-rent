@@ -1,6 +1,12 @@
 body{
     background-color: #073b4c;
+    
+}
+p{
     color: black;
+    font-style: oblique;
+    font-size: 25px;
+
 }
 .navbar-default {
   background-color:#ef476f;
