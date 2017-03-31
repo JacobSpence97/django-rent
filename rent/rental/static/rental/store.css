@@ -1,6 +1,6 @@
 body{
     background-color: #073b4c;
-    color: white;
+    color: black;
 }
 .navbar-default {
   background-color:#ef476f;
@@ -16,29 +16,6 @@ body{
     color: white;
     font-size: 200%;
 }
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
-    
-}
-
-td{
-    font-size: 200%;
-}
-
-tr:nth-child(even) {
-    background-color: #06d6a0;
-}
-/*li{
-    font-size: 200%;
-}*/
 .button {
     background-color:#ffd166 ;
     border: none;
@@ -61,4 +38,7 @@ form {
     display: inline-block;
     margin: 0;
     padding: 0;
+}
+p{
+    color: black;
 }

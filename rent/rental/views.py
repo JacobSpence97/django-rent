@@ -16,7 +16,6 @@ def store(request):
         rent_val = rental.rent_val
         rep_val = rental.rep_val
         quant = rental.quant
-        print(img, name, rental_type, rent_val, rep_val,quant)
 
     return render(request, "rental/store.html", {
         'rentals': rentals

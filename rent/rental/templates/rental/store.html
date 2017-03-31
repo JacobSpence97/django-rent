@@ -19,35 +19,30 @@
 <title>Rent-A-Flix STORE</title>
 </head>
 <body>
-<table>
-  <tr>
-    <th>Rental</th>
-    <th>Rental information</th>  
-  </tr>
- <tr>
-   {%  for rental in rentals%}
-    <td><img src="{{ rental.img }}" height="250" width="210"></td>
-    <td>
-      <h2>{{ rental.name }}</h2>
-    <ul>
-    <li> Type: {{ rental.rental_type }}</li>
-  <li>Rent Value: ${{ rental.rent_val }}</li>
-    <li>Replacement Value: ${{ rental.rep_val }}</li>
-    <li>{{ rental.quant }} In Stock</li>
+{%  for rental in rentals%}
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ rental.name }}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-lg-12 col-md-6 col-sm-6">
+    <img src="{{ rental.img }}" height="250" width="210">
+    </div>
+    <div class="col-lg-12 col-md-6 col-sm-6">
+    <p> Type: {{ rental.rental_type }}</p>
+    <p>Rent Value: ${{ rental.rent_val }}</p>
+    <p>Replacement Value: ${{ rental.rep_val }}</p>
+    <p>{{ rental.quant }} In Stock</p>
     <form action="  {% url 'rent' rental.id %}" class="rent" style=" display:inline!important;">
     <input type="submit" class="button" value="Rent">
     </form>
     <form action="{% url 'returns' rental.id %}" class="return" style=" display:inline!important;">
     <input type="submit" class="button" value="Return">
-    </form>
-    </ul>
-      </td>
-  </tr>
-  {% endfor%}
-  <tr>
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-    {% endfor %}
-    </table>
+    </div>
+  </div>
+</div>
+</div>
+ {% endfor%}
 </body>
 </html>
