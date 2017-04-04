@@ -19,6 +19,9 @@
 <title>Rent-A-Flix STORE</title>
 </head>
 <body>
+ {% for message in messages %}
+  <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
 {%  for rental in rentals%}
 <div class="col-lg-4 col-md-6 col-sm-12">
   <div class="panel panel-primary">
@@ -39,6 +42,7 @@
     </form>
     <form action="{% url 'returns' rental.id %}" class="return" style=" display:inline!important;">
     <input type="submit" class="button" value="Return">
+    </form>
     </div>
   </div>
 </div>
